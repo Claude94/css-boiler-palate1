@@ -6,26 +6,31 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /* common */
 .wrap {
     font: 14px "Noto Sans KR", sans-serif;
 }
+
 .en {
     font-family: "Exo 2", sans-serif;
 }
+
 .clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
+
 br.mo {
     display: none;
 }
+
 /* header */
 header {
     width: 100%;
     /* background: red; */
-    background: rgba(0,0,0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     height: 100px;
     line-height: 100px;
     position: fixed;
@@ -38,17 +43,21 @@ header .inner-header {
     /* background: orange; */
     margin: 0 auto;
 }
+
 header .inner-header .logo {
     float: left;
     width: 200px;
 }
+
 header .inner-header .logo img {
     width: 100%;
 }
+
 header .inner-header .gnb {
     float: left;
     margin-left: 80px;
 }
+
 header .inner-header .gnb li {
     float: left;
     margin-right: 80px;
@@ -60,6 +69,7 @@ header .inner-header .gnb li a {
     /* background: red; */
     display: block;
 }
+
 header .inner-header .gnb li a:hover {
     color: #ff8342;
 }
@@ -67,6 +77,7 @@ header .inner-header .gnb li a:hover {
 header .inner-header .tnb {
     float: right;
 }
+
 header .inner-header .tnb li {
     float: left;
     margin-right: 25px;
@@ -86,6 +97,7 @@ header .inner-header .tnb li:last-child a {
     border-radius: 30px;
     margin-top: 34px;
 }
+
 header .inner-header .tnb li:last-child a:hover {
     background: #fff;
     color: #ff8342;
@@ -108,11 +120,12 @@ section.main {
     position: relative;
 
 }
+
 section.main .main-title {
     opacity: 100%;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0,0,0, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 
     /* 박스를 정중앙의 배치 */
     position: absolute;
@@ -122,26 +135,31 @@ section.main .main-title {
 
     animation: uprising 1s;
 }
+
 @keyframes uprising {
     0% {
         opacity: 0;
         top: 60%;
     }
-    100%{
+
+    100% {
         opacity: 1;
         top: 50%;
 
     }
 }
+
 section.main .main-title h2 {
     font-size: 55px;
     margin-top: 20px;
 
 }
+
 section.main .main-title p {
     font-size: 25px;
     margin-bottom: 20px;
 }
+
 section.main .main-title .view {
     display: block;
     font-size: 15px;
@@ -155,8 +173,9 @@ section.main .main-title .view {
     position: relative;
     overflow: hidden;
 }
+
 section.main .main-title .view::after {
-    content:'';
+    content: '';
     width: 0%;
     height: 100%;
     background: rgba(255, 255, 255, 0.4);
@@ -165,6 +184,86 @@ section.main .main-title .view::after {
     top: 0;
     transition: 0.3s;
 }
+
 section.main .main-title .view:hover:after {
     width: 100%;
+}
+
+section.about {
+    background: #fff;
+    padding: 80px 0;
+}
+
+section.about .title {
+    color: #000;
+    text-align: center;
+}
+
+section.about .title h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+
+
+
+}
+
+section.about .title h2 span {
+    color: #ff8342;
+}
+
+section.about .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+section.about ul {
+    width: 73%;
+    margin: 30px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+section.about ul li {
+    float: left;
+    width: 33.333333%;
+}
+
+section.about ul li a .img-box {
+    overflow: hidden;
+}
+
+section.about ul li a .img-box img {
+    width: 100%;
+    transition: 0.7s;
+}
+section.about ul li a:hover .img-box img {
+    transform: scale(1.2s);
+}
+section.about ul li a .text {
+    padding: 25px;
+}
+section.about ul li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p.more {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 40px;
+    position: relative;
+}
+section.about ul li a .text p.more::before {
+    content:'\f30b';
+    font-family: "Font awesome 5 free";
+    width: 30px;
+    height: 30px;
+    background: #ff8342;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    line-height: 2;
 }
